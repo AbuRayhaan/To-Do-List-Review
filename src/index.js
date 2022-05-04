@@ -4,7 +4,7 @@ import UpdateLabel from './modules/updateList.js';
 import showTrash from './modules/toggle.js';
 import removeTask from './modules/removeTask.js';
 import {
-  SteerChecked, removeChecked,
+  steerChecked, removeChecked,
 } from './modules/taskFunctions.js';
 
 const toDoList = document.querySelector('#task-container');
@@ -90,6 +90,6 @@ document.addEventListener('keydown', (press) => {
 getTask();
 updateId();
 removeTask();
-SteerChecked();
+steerChecked();
 removeChecked();
 UpdateLabel();

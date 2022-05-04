@@ -1,7 +1,7 @@
-const SteerChecked = () => {
-  const StoreCheck = JSON.parse(localStorage.getItem('tasks'));
+const steerChecked = () => {
+  const storeCheck = JSON.parse(localStorage.getItem('tasks'));
   const checkBoxs = document.querySelectorAll('.check');
-  StoreCheck.forEach((a, i) => {
+  storeCheck.forEach((a, i) => {
     if (a.completed === true) {
       checkBoxs[i].checked = true;
       document.getElementById(`pTask${i}`).style.textDecoration = 'line-through rgb(68, 68, 68)';
@@ -29,11 +29,11 @@ const removeChecked = () => {
     });
 
     buttonRemove.addEventListener('click', () => {
-      const TaskFiltered = TasksR.filter((task) => task.completed !== true);
-      localStorage.setItem('tasks', JSON.stringify(TaskFiltered));
+      const taskFiltered = TasksR.filter((task) => task.completed !== true);
+      localStorage.setItem('tasks', JSON.stringify(taskFiltered));
       window.location.reload();
     });
   });
 };
 
-export { SteerChecked, removeChecked };
+export { steerChecked, removeChecked };
